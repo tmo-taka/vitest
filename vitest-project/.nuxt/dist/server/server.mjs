@@ -1,1 +1,0 @@
-export { default } from "file:///Users/tomoya.takahara/Desktop/%E8%87%AA%E7%BF%92%E7%94%A8/vitest/vitest-project/node_modules/@nuxt/vite-builder/dist/runtime/vite-node.mjs"
