@@ -1,10 +1,8 @@
 <template>
-  <NuxtLayout :name="layout">
-    <NuxtPage />
-  </NuxtLayout>
+  <NuxtPage />
 </template>
 
 <script setup>
 // API コールやログイン状態に応じて選択することができます
-const layout = "custom";
+// const layout = "custom";
 </script>
