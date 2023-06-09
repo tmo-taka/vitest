@@ -1,4 +1,4 @@
-import { describe, expect, test, it } from 'vitest';
+import { describe, expect, test, it ,act } from 'vitest';
 import { mount } from '@vue/test-utils'
 import Top from '../components/Top.vue'
 
@@ -17,8 +17,10 @@ describe('add', () => {
 });
 
 describe('Top Component', () => {
-    it('is a Vue instance', () => {
+    it('is a Vue instance', async () => {
         const wrapper = mount(Top);
-        expect(wrapper.vm.counter).toBe(0);
+        await expect(wrapper.vm.counter).toBe(0);
+        await wrapper.vm.increment();
+        await expect(wrapper.vm.counter).toBe(1);
     })
 });
