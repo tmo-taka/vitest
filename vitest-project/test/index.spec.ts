@@ -16,10 +16,12 @@ describe('add', () => {
     });
 });
 
-describe('Top Component', () => {
-    it('is a Vue instance', async () => {
-        const wrapper = mount(Top);
-        await expect(wrapper.vm.counter).toBe(0);
+describe('TopComponent', () => {
+    const wrapper = mount(Top);
+    test('first refs of counter = 0', () =>{
+        expect(wrapper.vm.counter).toBe(0);
+    })
+    test('after increment refs of counter = 1', async() =>{
         await wrapper.vm.increment();
         await expect(wrapper.vm.counter).toBe(1);
     })
