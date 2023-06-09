@@ -19,6 +19,6 @@ describe('add', () => {
 describe('Top Component', () => {
     it('is a Vue instance', () => {
         const wrapper = mount(Top);
-        expect(wrapper.vm).toBeTruthy();
+        expect(wrapper.vm.counter).toBe(0);
     })
 });
