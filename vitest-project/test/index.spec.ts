@@ -1,4 +1,4 @@
-import { describe, expect, test, it ,act } from 'vitest';
+import { describe, expect, test } from 'vitest';
 import { mount } from '@vue/test-utils'
 import Top from '../components/Top.vue'
 
