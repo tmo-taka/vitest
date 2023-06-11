@@ -31,6 +31,7 @@ export default defineConfig({
             exclude: [],
             all: true,
         },
-        environment: 'happy-dom',
+        environment: 'jsdom',
+        setupFiles: ['./vitest.setup.ts'],
     },
 })
