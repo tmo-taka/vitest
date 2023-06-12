@@ -4,6 +4,7 @@
             <!-- <template #header>ヘッダー</template> -->
             <Top />
             <List />
+            <Form />
         </div>
     </NuxtLayout>
 </template>
