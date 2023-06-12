@@ -11,6 +11,7 @@
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/user-event": "^14.4.3",
     "@testing-library/vue": "^7.0.0",
     "@types/node": "^18",
     "@vitejs/plugin-vue": "^4.2.3",
