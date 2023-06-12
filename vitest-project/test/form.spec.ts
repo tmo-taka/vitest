@@ -14,4 +14,20 @@ describe('FormComponent', () => {
         await user.type(form, mailValue);
         expect(screen.getByDisplayValue(mailValue)).toBeInTheDocument();
     })
+
+    test('first not display alert', () =>{
+        render(Form)
+        // ない可能性があるためクエリにした
+        const alert = screen.queryByText('入力文字に"@"を入れてください。');
+        expect(alert).not.toBeInTheDocument();
+    })
+
+    test('dummyValue Input display alert', async() =>{
+        render(Form)
+        const form = screen.getByRole('textbox',{name: 'メールアドレス'});
+        const mailValue = 'test';
+        await user.type(form, mailValue);
+        await userEvent.tab();
+        expect(screen.getByText('入力文字に"@"を入れてください。')).toBeInTheDocument();
+    })
 });
