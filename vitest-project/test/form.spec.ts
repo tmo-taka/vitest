@@ -22,7 +22,7 @@ describe('FormComponent', () => {
         expect(alert).not.toBeInTheDocument();
     })
 
-    test('dummyValue Input display alert', async() =>{
+    test('dummyValue Inputted display alert', async() =>{
         render(Form)
         const form = screen.getByRole('textbox',{name: 'メールアドレス'});
         const mailValue = 'test';

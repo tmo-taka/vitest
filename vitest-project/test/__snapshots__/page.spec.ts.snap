@@ -1,0 +1,145 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`page > snapshot 1`] = `
+{
+  "baseElement": <body>
+    <div>
+      <nuxtlayout>
+        <div>
+          <!-- &lt;template #header&gt;ヘッダー&lt;/template&gt; -->
+          <top />
+          <div>
+            <ul>
+              
+              <li>
+                <div>
+                  ダミータイトル
+                </div>
+                
+                <ul>
+                  <li>
+                    ダミータグ
+                  </li>
+                </ul>
+                
+                <p>
+                  ダミーテキスト
+                </p>
+              </li>
+              
+            </ul>
+          </div>
+          <fieldset>
+            <legend>
+              テストフォーム
+            </legend>
+            <label>
+               メールアドレス 
+              <input
+                placeholder="めーるあどれす"
+                type="text"
+              />
+              <!--v-if-->
+            </label>
+          </fieldset>
+        </div>
+      </nuxtlayout>
+    </div>
+  </body>,
+  "container": <div>
+    <nuxtlayout>
+      <div>
+        <!-- &lt;template #header&gt;ヘッダー&lt;/template&gt; -->
+        <top />
+        <div>
+          <ul>
+            
+            <li>
+              <div>
+                ダミータイトル
+              </div>
+              
+              <ul>
+                <li>
+                  ダミータグ
+                </li>
+              </ul>
+              
+              <p>
+                ダミーテキスト
+              </p>
+            </li>
+            
+          </ul>
+        </div>
+        <fieldset>
+          <legend>
+            テストフォーム
+          </legend>
+          <label>
+             メールアドレス 
+            <input
+              placeholder="めーるあどれす"
+              type="text"
+            />
+            <!--v-if-->
+          </label>
+        </fieldset>
+      </div>
+    </nuxtlayout>
+  </div>,
+  "debug": [Function],
+  "emitted": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "html": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

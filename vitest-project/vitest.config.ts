@@ -3,6 +3,7 @@
 import { defineConfig } from 'vite'
 import Vue from '@vitejs/plugin-vue'
 import AutoImport from 'unplugin-auto-import/vite'
+import Components from 'unplugin-vue-components/vite'
 
 export default defineConfig({
     plugins: [
@@ -22,6 +23,34 @@ export default defineConfig({
                 },
             ],
         }),
+        Components({
+            dts: false,
+            resolvers: [
+                (componentName: string) => {
+                    if (componentName === 'Form') {
+                        return {
+                            name: 'default',
+                            as: componentName,
+                            from: '../components/Form.vue',
+                        }
+                    }
+                    if (componentName === 'List') {
+                        return {
+                            name: 'default',
+                            as: componentName,
+                            from: '../components/List.vue',
+                        }
+                    }
+                    if (componentName === 'Form') {
+                        return {
+                            name: 'default',
+                            as: componentName,
+                            from: '../components/Form.vue',
+                        }
+                    }
+                },
+            ],
+        })
     ],
     test: {
         globals: true,

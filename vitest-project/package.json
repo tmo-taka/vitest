@@ -21,6 +21,7 @@
     "jsdom": "^22.1.0",
     "nuxt": "^3.5.0",
     "unplugin-auto-import": "^0.16.4",
+    "unplugin-vue-components": "^0.25.1",
     "vitest": "^0.31.4"
   }
 }
