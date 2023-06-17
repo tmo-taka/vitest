@@ -59,6 +59,7 @@ export default defineConfig({
             include: ['test/**/*.{ts}'],
             exclude: [],
             all: true,
+            reporter: ["html"]
         },
         environment: 'jsdom',
         setupFiles: ['./vitest.setup.ts'],
