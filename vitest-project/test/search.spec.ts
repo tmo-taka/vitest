@@ -10,8 +10,8 @@ vi.mock('vue-router');
 // vi.mock("#app", () => ({ useRouter: vi.fn() }));
 
 describe('search page', () => {
-    const mockRoute = (name:string) => {
-        useRoute.mockReturnValue({
+    const mockRoute = (name?:string) => {
+        useRoute.mockReturnValueOnce({
             query: {
                 name,
             },
@@ -19,15 +19,19 @@ describe('search page', () => {
     }
 
 
-    test('get query', async () =>{
+    test('query name is abc', () =>{
         mockRoute('abc')
         const wrap = mount(Search);
 
-        // const h1 = await wrap.html().find('h1');
-        expect(wrap.html()).toContain('こんにちはabcさん')
+        const h1 = wrap.find('h1').text();
+        expect(h1).toBe('こんにちはabcさん')
+    })
 
-        // const h1 = await screen.getByRole('heading', {level: 1});
-        // screen.debug(h1);
-        // expect(h1).getByText('こんにちはabcさん');
+    test('query name is not defined', () =>{
+        mockRoute()
+        const wrap = mount(Search);
+
+        const h1 = wrap.find('h1').text();
+        expect(h1).toBe('こんにちは名無しさん')
     })
 });
