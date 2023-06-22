@@ -9,6 +9,8 @@
         mail: false
     })
 
+    const submitFlag = ref<boolean>(false);
+
     type UserInformationKey = keyof (typeof userInformation)
     const valueUpdate = (event: Event, id: UserInformationKey) => {
         if(!(event.target instanceof HTMLInputElement)){ return }
@@ -22,17 +24,29 @@
                 errorFlag[id] = isNaN(Number(userInformation[id])) ? true : false;
         }
     }
+
+    const judgeSubmit = ():boolean => {
+        const userInformationArr:string[] = Object.values(userInformation);
+        const errorFlagArr:boolean[] = Object.values(errorFlag);
+        const judgeData = userInformationArr.every(data => data);
+        const judgeError = errorFlagArr.every(error => !error);
+
+        return judgeData && judgeError ? true : false
+    }
+
+    const submitData = ():void => {submitFlag.value = true}
 </script>
 
 <template>
     <form action="" method="get" class="form-example">
         <fieldset>
             <legend>個人情報</legend>
+            <!-- TODO: v-forにする -->
             <div>
                 <label>
                     メールアドレス
                     <input type="text" placeholder="めーるあどれす" @blur="valueUpdate($event,'mail')" :value="userInformation.mail">
-                    <div v-if="errorFlag.mail">入力文字に"@"を入れてください。</div>
+                    <div v-if="errorFlag.mail" role="">入力文字に"@"を入れてください。</div>
                 </label>
             </div>
             <div>
@@ -43,5 +57,7 @@
                 </label>
             </div>
         </fieldset>
+        <button type="button" :disabled="!judgeSubmit()" @click="submitData()">送信</button>
+        <div v-if="submitFlag">送信が完了しました！</div>
     </form>
 </template>
