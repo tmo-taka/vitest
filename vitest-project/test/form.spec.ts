@@ -56,4 +56,15 @@ describe('FormComponent inputData Submit', () => {
         const alert = screen.queryByText('数値で入力してください。');
         expect(alert).not.toBeInTheDocument();
     })
+
+    test('success submit button', async() =>{
+        const telValue = '08035323909';
+        const mailValue = 'test@mail.com';
+        await inputtedMail(mailValue);
+        await userEvent.tab();
+        await inputtedTel(telValue);
+        await userEvent.tab();
+        await clickButton('送信');
+        expect(screen.queryByText('送信が完了しました！')).toBeInTheDocument();
+    })
 });
