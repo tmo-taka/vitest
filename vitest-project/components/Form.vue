@@ -53,7 +53,7 @@
                 <label>
                     電話番号
                     <input type="tel" placeholder="電話番号" @blur="valueUpdate($event,'tel')" :value="userInformation.tel">
-                    <div v-if="errorFlag.tel">数値で入力してください</div>
+                    <div v-if="errorFlag.tel">数値で入力してください。</div>
                 </label>
             </div>
         </fieldset>
