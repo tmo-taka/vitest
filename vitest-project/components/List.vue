@@ -23,7 +23,7 @@
 
 <template>
     <div>
-        <ul>
+        <ul class="box">
             <li v-for="list in props.lists" :key="list.title">
                 <div>{{ list.title }}</div>
                 <ul v-for="tag in list.tags" :key="tag">
@@ -36,3 +36,9 @@
         </ul>
     </div>
 </template>
+
+<style lang="scss">
+.box {
+    border: solid 1px #F00;
+}
+</style>

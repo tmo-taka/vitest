@@ -1,15 +1,16 @@
-import { Story } from "@storybook/vue3";
+import { StoryObj } from "@storybook/vue3";
 import List from "../List.vue";
+
+type Story = StoryObj<typeof List >;
 
 export default {
     title: "components/List",
     component: List,
 }
 
-const Template: Story<typeof List> = () => ({
-    components: { List },
-    template: "<List />",
-});
-
-export const Default = Template.bind({});
-Default.storyName = "Increment List";
+export const Template: Story  = {
+    render: () => ({
+        components: { List },
+        template: "<List />",
+    })
+};
