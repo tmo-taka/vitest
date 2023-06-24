@@ -12,6 +12,7 @@
     "build-storybook": "storybook build"
   },
   "devDependencies": {
+    "@storybook/addon-controls": "^7.0.2",
     "@storybook/addon-essentials": "^7.0.23",
     "@storybook/addon-interactions": "^7.0.23",
     "@storybook/addon-links": "^7.0.23",
