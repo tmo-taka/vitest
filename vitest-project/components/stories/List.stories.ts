@@ -8,14 +8,26 @@ export default {
     component: List,
 }
 
-export const Template: Story  = {
+const Template: Story  = {
     render: (args) => ({
         components: { List },
         setup() {
             return { args };
         },
         template: "<List :lists='args'/>",
-    })
+    }),
+};
+
+export const Default: Story = {
+    args: {
+        lists: [
+            {
+                title: 'ダミータイトル',
+                tags: ['ダミータグ'],
+                text: 'ダミーテキスト'
+            }
+        ]
+    },
 };
 
 export const Test: Story = {
