@@ -1,21 +1,28 @@
-import { StoryObj } from "@storybook/vue3";
+import { Meta, StoryObj } from "@storybook/vue3";
 import List from "../List.vue";
 
-type Story = StoryObj<typeof List >;
+type Story = StoryObj<typeof List>;
 
-export default {
+const meta: Meta<typeof List>  = {
     title: "components/List",
     component: List,
-}
-
-const Template: Story  = {
     render: (args) => ({
         components: { List },
         setup() {
             return { args };
         },
-        template: "<List :lists='args'/>",
+        template: "<List v-bind='args'/>",
     }),
+    args: {
+        lists: [
+            {
+                title: 'ダミータイトル',
+                tags: ['ダミータグ'],
+                text: 'ダミーテキスト'
+            }
+        ]
+    },
+    tags: ["autodocs"]
 };
 
 export const Default: Story = {
@@ -46,3 +53,5 @@ export const Test: Story = {
         ]
     },
 };
+
+export default meta;
