@@ -5,7 +5,8 @@ const config = {
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
-    "@storybook/addon-controls"
+    "@storybook/addon-controls",
+    "@storybook/addon-viewport"
   ],
   framework: {
     name: "@storybook/vue3-vite",
