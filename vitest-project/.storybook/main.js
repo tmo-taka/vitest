@@ -8,6 +8,7 @@ const config = {
     "@storybook/addon-controls",
     "@storybook/addon-viewport",
     "@storybook/addon-docs",
+    "storycap",
   ],
   framework: {
     name: "@storybook/vue3-vite",

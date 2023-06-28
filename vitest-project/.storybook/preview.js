@@ -1,5 +1,12 @@
 /** @type { import('@storybook/vue3').Preview } */
-const preview = {
+
+import { withScreenshot } from 'storycap';
+
+export const decorators = [
+  withScreenshot, // Registration the decorator is required
+];
+
+export const preview = {
   parameters: {
     actions: { argTypesRegex: "^on[A-Z].*" },
     controls: {
@@ -8,7 +15,8 @@ const preview = {
         date: /Date$/,
       },
     },
+    screenshot: {
+      delay: 500
+    }
   },
 };
-
-export default preview;

@@ -8,8 +8,9 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "test": "vitest --coverage",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "storybook:dev": "storybook dev -p 6006",
+    "storybook:build": "storybook build",
+    "storycap": "npx storycap http://localhost:9006 --serverCmd \"npx storybook dev -p 9006\""
   },
   "devDependencies": {
     "@storybook/addon-controls": "^7.0.2",
@@ -36,8 +37,10 @@
     "nuxt": "^3.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "reg-cli": "^0.17.7",
     "sass": "^1.63.6",
     "storybook": "^7.0.23",
+    "storycap": "^4.1.2",
     "unplugin-auto-import": "^0.16.4",
     "unplugin-vue-components": "^0.25.1",
     "vitest": "^0.31.4"
