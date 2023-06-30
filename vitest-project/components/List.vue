@@ -40,5 +40,6 @@
 <style lang="scss">
 .box {
     border: solid 1px #F00;
+    padding-bottom: 20px;
 }
 </style>
