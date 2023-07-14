@@ -27,5 +27,9 @@ jobs:
         with:
             node-version: 16.x
 
-      - name: Node install
+      - name: Node Install
         run: cd vitest-project && npm i
+
+      - name: Test Run
+        run: ls
+        run: npm run test
