@@ -1,4 +1,4 @@
-export default defineNuxtPlugin(nuxtApp => {
+export default defineNuxtPlugin(() => {
     // nuxtApp.provide('openChrome', () => {
     //     console.log('ddd')
     // })

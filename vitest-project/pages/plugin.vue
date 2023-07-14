@@ -12,6 +12,7 @@
             <!-- <div>
                 {{ $openChrome() }}
             </div> -->
+            <Props :text="'takahara'"/>
         </div>
     </NuxtLayout>
 </template>
