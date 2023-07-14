@@ -31,6 +31,4 @@ jobs:
         run: cd vitest-project && npm i
 
       - name: Test Run
-        run: cd vitest-project
-      - run: ls
-      - run: npm run test
+        run: cd vitest-project && ls && npm run test
