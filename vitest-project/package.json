@@ -10,7 +10,8 @@
     "test": "vitest --coverage",
     "storybook:dev": "storybook dev -p 6006",
     "storybook:build": "storybook build",
-    "storycap": "npx storycap http://localhost:9006 --serverCmd \"npx storybook dev -p 9006\""
+    "storycap": "npx storycap http://localhost:9006 --serverCmd \"npx storybook dev -p 9006\"",
+    "reg-cli:diff": "npx reg-cli ./vrt/actual ./vrt/expected ./vrt/diff -R ./report.html"
   },
   "devDependencies": {
     "@storybook/addon-controls": "^7.0.2",
