@@ -52,14 +52,16 @@ export default defineConfig({
             ],
         })
     ],
+    // NOTE: coverageではall:trueを最初にしなければ描画されない
     test: {
         globals: true,
+        include: ['**/*.spec.?(c|m)[jt]s?(x)'],
         coverage: {
             provider: 'c8',
-            include: ['test/**/*.{ts}'],
-            exclude: [],
             all: true,
-            reporter: ["html"]
+            include: ['test/**/*.ts'],
+            exclude: ['test/setup/*.ts'],
+            reporter: ["html","text"]
         },
         environment: 'jsdom',
         setupFiles: ['./vitest.setup.ts'],
