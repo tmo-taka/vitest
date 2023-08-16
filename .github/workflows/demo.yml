@@ -31,6 +31,7 @@ jobs:
         run: cd vitest-project && ls && npm run test
 
       - name: 'Report Frontend Coverage'
+        run: cd vitest-project
         if: always() # Also generate the report if tests are failing
         uses:  davelosert/vitest-coverage-report-action@v2
         with:
